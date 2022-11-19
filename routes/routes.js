@@ -1,4 +1,5 @@
 import express from "express";
+import Trail from "../models/trail.js";
 const router = express.Router();
 
 router.use((req, res, next) => {
@@ -6,12 +7,8 @@ router.use((req, res, next) => {
 });
 
 router.get("/", async (req, res) => {
-  res.render("index");
-});
-
-router.get("/trail", async (req, res) => {
-  await Trail.create({ name: req.params.name, difficulty: "easy" });
-  res.render("trail");
+  const trails = await Trail.find({});
+  res.render("index", { trails });
 });
 
 export default router;

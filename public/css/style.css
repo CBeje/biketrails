@@ -1,0 +1,47 @@
+body {
+    box-sizing: border-box;
+}
+
+main {
+    height: 600px;
+    background-image: url("../IMG_36650.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+.difficulty-level-button:hover {
+    cursor: pointer;
+}
+.trails-container {
+    padding-top: 25px;
+}
+
+.trail-button {
+    margin: 10px;
+    border: none;
+}
+
+.trail-button:hover {
+    background-color: cadetblue;
+}
+
+.easy {
+    background-color: green;
+}
+
+.medium {
+    background-color: #007bff;
+}
+
+.hard {
+    background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

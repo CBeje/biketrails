@@ -1,4 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const schema = new mongoose.Schema({ name:'string', difficulty:'string'});
-module.exports = mongoose.model('Trail', schema);
+const schema = new mongoose.Schema({
+  code: "string",
+  name: "string",
+  difficulty: "string",
+  img: "string",
+});
+
+export let Trail = mongoose.model("Trail", schema);
+export default Trail;
